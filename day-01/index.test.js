@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation } = require('./index');
+const { reverseSentence, addPunctuation, titleCaseWords } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -9,8 +9,15 @@ describe('primitive code challenges', () => {
   it('should add punctuation to sentence', () => {
     const addExcitement = addPunctuation('!!!');
 
+    const addQuery = addPunctuation('??');
+
     const weee = addExcitement('weee');
 
     expect(weee).toEqual('weee!!!');
+    expect(addQuery('huh')).toEqual('huh??');
+  });
+  it('Should title case words', () => {
+  expect(titleCaseWords('hello everybody')).toEqual('Hello Everybody');
+
   })
 });
