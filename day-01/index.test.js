@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, titleCaseWords, oddishEvenish, at, anagrams } = require('./index');
+const { reverseSentence, addPunctuation, titleCaseWords, oddishEvenish, at, anagrams, fizzBuzz } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -22,6 +22,7 @@ describe('primitive code challenges', () => {
   it('should return oddish or evenish', () => {
     expect(oddishEvenish('123')).toEqual('evenish');
     expect(oddishEvenish('313')).toEqual('oddish');
+    expect(oddishEvenish('313')).toEqual('oddish');
   });
   it('should find array.at()', () => {
     const arr = [1, 2, 3, 4];
@@ -36,5 +37,9 @@ describe('primitive code challenges', () => {
 
     expect(anagrams(first, second)).toEqual(true);
     expect(anagrams(fir, nichtFir)).toEqual(false);
-  })
+  });
+  it('fizzBuzz should work', () => {
+    const arr =  [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 13, 14, 'fizzBuzz'];
+    expect(fizzBuzz(15)).toEqual(arr);
+  }); 
 });

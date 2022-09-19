@@ -18,9 +18,9 @@ function titleCaseWords(string) {
   .join(' ');
 }
 
-function oddishEvenish(string) {
+function oddishEvenish(number) {
   let num = 0
-  string.split('').map(number => num += Number(number));
+  String(number).split('').map(number => num += Number(number));
   return num % 2 === 0 ? 'evenish' : 'oddish';
 }
 
@@ -35,5 +35,21 @@ function anagrams(str1, str2) {
   return ein.map(letter => swei.includes(letter)).includes(false) ? false : true;
 }
 
+function fizzBuzz(number) {
+  const arr = [];
+  for (let i = 1; i <= number; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push ('fizzBuzz');
+    } else if (i % 3 === 0) {
+      arr.push('fizz') 
+    } else if (i % 5 === 0) {
+      arr.push('buzz');
+    } else arr.push(i);
+  }
+
+  return arr;
+}
+
 module.exports = { reverseSentence, addPunctuation, titleCaseWords,
-                    oddishEvenish, at, anagrams };
+                   oddishEvenish, at, anagrams,
+                   fizzBuzz};
