@@ -17,4 +17,10 @@ function titleCaseWords(string) {
   .map(word => word[0].toUpperCase() + word.slice(1))
   .join(' ');
 }
-module.exports = { reverseSentence, addPunctuation, titleCaseWords };
+
+function oddishEvenish(string) {
+  let num = 0
+  string.split('').map(number => num += Number(number));
+  return num % 2 === 0 ? 'evenish' : 'oddish';
+}
+module.exports = { reverseSentence, addPunctuation, titleCaseWords, oddishEvenish };
