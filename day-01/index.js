@@ -28,4 +28,12 @@ function at(arr, i) {
   return i >= 0 ? arr[i] : arr[arr.length + i];
 }
 
-module.exports = { reverseSentence, addPunctuation, titleCaseWords, oddishEvenish, at };
+function anagrams(str1, str2) {
+  const ein = str1.split('');
+  const swei = str2.split('');
+
+  return ein.map(letter => swei.includes(letter)).includes(false) ? false : true;
+}
+
+module.exports = { reverseSentence, addPunctuation, titleCaseWords,
+                    oddishEvenish, at, anagrams };
