@@ -1,4 +1,4 @@
-const { reverseSentence } = require('./index');
+const { reverseSentence, addPunctuation } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -6,4 +6,11 @@ describe('primitive code challenges', () => {
       expect(reverseSentence('alchemy rocks gold')).toBe('ymehcla skcor dlog');
     });
   });
+  it('should add punctuation to sentence', () => {
+    const addExcitement = addPunctuation('!!!');
+
+    const weee = addExcitement('weee');
+
+    expect(weee).toEqual('weee!!!');
+  })
 });
