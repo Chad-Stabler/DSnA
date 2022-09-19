@@ -23,4 +23,9 @@ function oddishEvenish(string) {
   string.split('').map(number => num += Number(number));
   return num % 2 === 0 ? 'evenish' : 'oddish';
 }
-module.exports = { reverseSentence, addPunctuation, titleCaseWords, oddishEvenish };
+
+function at(arr, i) {
+  return i >= 0 ? arr[i] : arr[arr.length + i];
+}
+
+module.exports = { reverseSentence, addPunctuation, titleCaseWords, oddishEvenish, at };
