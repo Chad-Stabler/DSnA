@@ -9,10 +9,13 @@ class Queue {
     this.#list.push(item);
   }
 
-  peek() {
-    return this.#list[this.#list.length - 1];
+  dequeue() {
+    this.#list = this.#list.slice(1);
   }
-  
+
+  hasNext() {
+    return this.#list.length ? true : false;
+  }
 }
 
 module.exports = { Queue };
