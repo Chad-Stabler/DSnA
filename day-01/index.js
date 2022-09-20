@@ -68,4 +68,4 @@ function rootDigit(n) {
 
 module.exports = { reverseSentence, addPunctuation, titleCaseWords,
   oddishEvenish, at, anagrams,
-  fizzBuzz, multiples, rootDigit};
+  fizzBuzz, multiples, rootDigit };
