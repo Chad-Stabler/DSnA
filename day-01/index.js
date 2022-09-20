@@ -58,6 +58,14 @@ function multiples(number) {
   return arr;
 }
 
+function rootDigit(n) {
+  const digits = n.toString().split('');
+const numbers = digits.map(d => +d);
+const sum = numbers.reduce((a, b) => a + b);
+
+  return String(sum).split('').length === 1 ? sum : rootDigit(sum);
+}
+
 module.exports = { reverseSentence, addPunctuation, titleCaseWords,
                    oddishEvenish, at, anagrams,
-                   fizzBuzz, multiples};
+                   fizzBuzz, multiples, rootDigit};
