@@ -7,19 +7,19 @@ function reverseSentence(str) {
 
 function addPunctuation(string) {
   return function punctuate(quote) {
-    return (`${quote}${string}`)
+    return (`${quote}${string}`);
   };
 }
 
 function titleCaseWords(string) {
   return string
-  .split(' ')
-  .map(word => word[0].toUpperCase() + word.slice(1))
-  .join(' ');
+    .split(' ')
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
 function oddishEvenish(number) {
-  let num = 0
+  let num = 0;
   String(number).split('').map(number => num += Number(number));
   return num % 2 === 0 ? 'evenish' : 'oddish';
 }
@@ -41,7 +41,7 @@ function fizzBuzz(number) {
     if (i % 3 === 0 && i % 5 === 0) {
       arr.push ('fizzBuzz');
     } else if (i % 3 === 0) {
-      arr.push('fizz') 
+      arr.push('fizz');
     } else if (i % 5 === 0) {
       arr.push('buzz');
     } else arr.push(i);
@@ -60,12 +60,12 @@ function multiples(number) {
 
 function rootDigit(n) {
   const digits = n.toString().split('');
-const numbers = digits.map(d => +d);
-const sum = numbers.reduce((a, b) => a + b);
+  const numbers = digits.map(d => +d);
+  const sum = numbers.reduce((a, b) => a + b);
 
   return String(sum).split('').length === 1 ? sum : rootDigit(sum);
 }
 
 module.exports = { reverseSentence, addPunctuation, titleCaseWords,
-                   oddishEvenish, at, anagrams,
-                   fizzBuzz, multiples, rootDigit};
+  oddishEvenish, at, anagrams,
+  fizzBuzz, multiples, rootDigit};

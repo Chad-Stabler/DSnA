@@ -17,7 +17,7 @@ describe('primitive code challenges', () => {
     expect(addQuery('huh')).toEqual('huh??');
   });
   it('Should title case words', () => {
-  expect(titleCaseWords('hello everybody')).toEqual('Hello Everybody');
+    expect(titleCaseWords('hello everybody')).toEqual('Hello Everybody');
   });
   it('should return oddish or evenish', () => {
     expect(oddishEvenish('123')).toEqual('evenish');
