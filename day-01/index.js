@@ -46,10 +46,18 @@ function fizzBuzz(number) {
       arr.push('buzz');
     } else arr.push(i);
   }
+  return arr;
+}
 
+function multiples(number) {
+  const arr = [];
+  if (number >= 50) return arr;
+  for (let i = 1; i <= 50; i++) {
+    if (i % number === 0) arr.push(i);
+  }
   return arr;
 }
 
 module.exports = { reverseSentence, addPunctuation, titleCaseWords,
                    oddishEvenish, at, anagrams,
-                   fizzBuzz};
+                   fizzBuzz, multiples};
