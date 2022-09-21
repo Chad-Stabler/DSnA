@@ -15,4 +15,8 @@ describe('Stack class', () => {
     stack.pop();
     expect(stack.peek()).toEqual('wee');
   });
+  it('checking syntax should work', () => {
+    const stack = new Stack();
+    expect(stack.checkSyntax('((2 + 3) * (4 + 11 * (2 - 1)))')).toEqual(true);
+  });
 });

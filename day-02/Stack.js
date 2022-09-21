@@ -16,6 +16,35 @@ class Stack {
   pop() {
     return this.#list.pop();
   }
+
+  checkSyntax(code) { 
+    const arrayToCheck = new Stack();
+    const opening = [];
+    const closing = [];
+    String(code).split('').map(char => {
+      if (char === '(' ||  char === ')' || char === '{' || char === '}') {
+        arrayToCheck.push(char);
+      }
+    });
+    const length = arrayToCheck.list.length;
+
+    for (let i = 0; i < length; i++) {
+      if (arrayToCheck.peek() === '(' || arrayToCheck.peek() === '{') {
+        opening.push(1);
+        arrayToCheck.pop();
+      } else if (arrayToCheck.peek() === ')' || arrayToCheck.peek() === '}') {
+        closing.push(1);
+        arrayToCheck.pop();
+      }
+
+    }
+    return String(opening) === String(closing) ? true : false;
+
+  }
+
+  get list() {
+    return this.#list;
+  }
 }
 
 module.exports = { Stack };
