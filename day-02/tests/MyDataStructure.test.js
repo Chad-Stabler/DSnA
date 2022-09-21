@@ -17,4 +17,5 @@ describe('MyDataStructure', () => {
     const myStructure = new MyDataStructure([4, 6, 8]);
     expect(myStructure.count).toBe(3);
   });
+
 });
