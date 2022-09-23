@@ -30,13 +30,12 @@ class Stack {
 
     for (let i = 0; i < length; i++) {
       if (arrayToCheck.peek() === '(' || arrayToCheck.peek() === '{') {
-        opening.push(1);
+        opening.push(arrayToCheck.peek() === '(' ? 1 : 2);
         arrayToCheck.pop();
       } else if (arrayToCheck.peek() === ')' || arrayToCheck.peek() === '}') {
-        closing.push(1);
+        closing.push(arrayToCheck.peek() === ')' ? 1 : 2);
         arrayToCheck.pop();
       }
-
     }
     return String(opening) === String(closing) ? true : false;
 
