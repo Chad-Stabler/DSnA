@@ -13,13 +13,13 @@ function checkSyntax(code) { ... }
 
 Input | Output
 ---|---
-`if(true) { return; }` | `true` 
-`if(true( { return; }` | `false` 
-`if(true) { return;` | `false` 
-`(if(true) { return; }` | `false` 
-`( true && { name: 'foo' } )` | `true` 
-`( true && { name: 'foo' ) )` | `false` 
-`( true && ( name: 'foo' } )` | `false` 
+`if(true) { return; }` | `true`
+`if(true( { return; }` | `false`
+`if(true) { return;` | `false`
+`(if(true) { return; }` | `false`
+`( true && { name: 'foo' } )` | `true`
+`( true && { name: 'foo' ) )` | `false`
+`( true && ( name: 'foo' } )` | `false`
 `((2 + 3) * (4 + 11 * (2 - 1)))` | `true`
 `((2 + 3) * (4 + 11 * 2 - 1)))` | `false`
 `((2 + 3) * (4 + 11 * (2 - 1))` | `false`
