@@ -20,6 +20,29 @@ class BinaryTree {
 
     return node;
   };
+
+  findPerson = (name) => {
+    if (this.data === name) {
+      return this;
+    } else {
+      if (this.left !== null) {
+        const foundLeft = this.left.findPerson(name);
+        if (foundLeft) {
+          return foundLeft;
+        }
+      }
+      if (this.right !== null) {
+        const foundRight = this.right.findPerson(name);
+        if (foundRight) {
+          return foundRight;
+        }
+      }
+    }
+    
+
+    return null;
+    
+  };
 }
 
 module.exports = { BinaryTree };
